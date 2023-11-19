@@ -9,6 +9,7 @@ servs = aternos.list_servers()
 myserv = servs[0]
 canBeStarted = bool
 admins = [575327633420714004]
+ds_token = str(input("Введите токен вашего бота   "))
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -57,4 +58,4 @@ async def atstatus(ctx):
     await ctx.send(' <@' + str(ctx.author.id) + '>' + "  ***     Сервер  " + myserv.status + " \n  Ip -  " + myserv.address + " \n   Может быть запущен? -  " + str(canBeStarted))
 
 
-bot.run('MTE3NTEyMTAwNzU0NDEyMzQ4Mg.GebmXG.BFq7btyrlcZOD0ra2qcmhr91tWm4kFZEvEU-6M')
+bot.run(ds_token)
